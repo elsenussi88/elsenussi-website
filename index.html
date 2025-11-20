@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alsanousi Faraj | Vipe Coding for Fun</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 </head>
+
 <body>
   <!-- Wave Animation Background -->
   <div class="wave-container">
     <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
       <defs>
         <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style="stop-color:rgba(0,255,255,0.3);stop-opacity:1" />
-          <stop offset="50%" style="stop-color:rgba(0,170,255,0.5);stop-opacity:1" />
-          <stop offset="100%" style="stop-color:rgba(0,255,255,0.3);stop-opacity:1" />
+          <stop offset="0%" style="stop-color:rgba(0,0,0,0.1);stop-opacity:1" />
+          <stop offset="50%" style="stop-color:rgba(50,50,50,0.15);stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(0,0,0,0.1);stop-opacity:1" />
         </linearGradient>
       </defs>
-      <path class="wave wave1" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" fill="url(#gradient1)" opacity="0.3" />
-      <path class="wave wave2" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" fill="url(#gradient1)" opacity="0.2" />
-      <path class="wave wave3" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" fill="url(#gradient1)" opacity="0.1" />
+      <path class="wave wave1" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+        fill="url(#gradient1)" opacity="0.3" />
+      <path class="wave wave2" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+        fill="url(#gradient1)" opacity="0.2" />
+      <path class="wave wave3" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+        fill="url(#gradient1)" opacity="0.1" />
     </svg>
   </div>
 
@@ -34,7 +39,7 @@
 
   <!-- Main Content -->
   <main class="main-content">
-    
+
     <!-- Hero Section -->
     <section class="hero-minimal">
       <div class="profile-glow-wrapper">
@@ -62,25 +67,38 @@
         <p class="philosophy-subtitle">Where AI meets curiosity</p>
       </div>
 
-      <!-- Social Links -->
-      <div class="social-grid">
-        <a href="mailto:elsenussi.ea@gmail.com" class="social-btn" target="_blank" rel="noopener noreferrer" data-tooltip="Email">
+      <!-- Social Sphere 3D -->
+      <div id="social-sphere" class="social-sphere">
+        <a href="mailto:elsenussi.ea@gmail.com" class="social-item" target="_blank" rel="noopener noreferrer"
+          title="Email">
           <i class="fas fa-envelope"></i>
         </a>
-        <a href="https://wa.me/218924008830" class="social-btn" target="_blank" rel="noopener noreferrer" data-tooltip="WhatsApp">
+        <a href="https://wa.me/218924008830" class="social-item" target="_blank" rel="noopener noreferrer"
+          title="WhatsApp">
           <i class="fab fa-whatsapp"></i>
         </a>
-        <a href="https://t.me/00218924008830" class="social-btn" target="_blank" rel="noopener noreferrer" data-tooltip="Telegram">
+        <a href="https://t.me/+218924008830" class="social-item" target="_blank" rel="noopener noreferrer"
+          title="Telegram">
           <i class="fab fa-telegram"></i>
         </a>
-        <a href="https://linkedin.com/in/alsanousi-faraj-66222519b" class="social-btn" target="_blank" rel="noopener noreferrer" data-tooltip="LinkedIn">
+        <a href="https://linkedin.com/in/alsanousi-faraj-66222519b" class="social-item" target="_blank"
+          rel="noopener noreferrer" title="LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://github.com/AL-1988" class="social-btn" target="_blank" rel="noopener noreferrer" data-tooltip="GitHub">
+        <a href="https://github.com/elsenussi88" class="social-item" target="_blank" rel="noopener noreferrer"
+          title="GitHub">
           <i class="fab fa-github"></i>
         </a>
-        <a href="https://www.behance.net/alsanousi-faraj" class="social-btn" target="_blank" rel="noopener noreferrer" data-tooltip="Behance">
+        <a href="https://www.behance.net/alsanousi-faraj" class="social-item" target="_blank" rel="noopener noreferrer"
+          title="Behance">
           <i class="fab fa-behance-square"></i>
+        </a>
+        <a href="https://x.com/EL_19021" class="social-item" target="_blank" rel="noopener noreferrer" title="X">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://www.facebook.com/elsenussi.albrgot" class="social-item" target="_blank"
+          rel="noopener noreferrer" title="Facebook">
+          <i class="fab fa-facebook"></i>
         </a>
       </div>
 
@@ -95,6 +113,8 @@
 
   <!-- Particles -->
   <script src="particles.js"></script>
+  <script src="social-sphere.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>

@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('mousemove', (e) => {
     const mouseX = e.clientX / window.innerWidth;
     const mouseY = e.clientY / window.innerHeight;
-    
+
     // Move floating symbols
     const floatItems = document.querySelectorAll('.float-item');
     floatItems.forEach((item, index) => {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const y = (mouseY - 0.5) * speed;
       item.style.transform = `translate(${x}px, ${y}px)`;
     });
-    
+
     // Profile image tilt effect
     const profile = document.querySelector('.profile-image');
     if (profile) {
@@ -35,24 +35,24 @@ document.addEventListener('DOMContentLoaded', () => {
   // Add ripple effect on social button click
   const socialBtns = document.querySelectorAll('.social-btn');
   socialBtns.forEach(btn => {
-    btn.addEventListener('click', function(e) {
+    btn.addEventListener('click', function (e) {
       const ripple = document.createElement('div');
       ripple.classList.add('ripple-effect');
       this.appendChild(ripple);
-      
+
       const rect = this.getBoundingClientRect();
       const size = Math.max(rect.width, rect.height);
       const x = e.clientX - rect.left - size / 2;
       const y = e.clientY - rect.top - size / 2;
-      
+
       ripple.style.width = ripple.style.height = size + 'px';
       ripple.style.left = x + 'px';
       ripple.style.top = y + 'px';
-      
+
       ripple.style.cssText = `
         position: absolute;
         border-radius: 50%;
-        background: rgba(0, 255, 255, 0.5);
+        background: rgba(0, 0, 0, 0.5);
         width: ${size}px;
         height: ${size}px;
         left: ${x}px;
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         animation: ripple-animation 0.6s ease-out;
         pointer-events: none;
       `;
-      
+
       setTimeout(() => ripple.remove(), 600);
     });
   });
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('mousemove', (e) => {
     cursorTrail.push({ x: e.clientX, y: e.clientY, time: Date.now() });
-    
+
     if (cursorTrail.length > trailLength) {
       cursorTrail.shift();
     }

@@ -19,15 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Neon particle colors
   const colors = [
-    'rgba(0, 255, 255, 0.8)',
-    'rgba(0, 200, 255, 0.7)',
-    'rgba(0, 170, 255, 0.9)',
-    'rgba(100, 255, 255, 0.6)',
+    'rgba(0, 0, 0, 0.8)',
+    'rgba(50, 50, 50, 0.7)',
+    'rgba(20, 20, 20, 0.9)',
+    'rgba(100, 100, 100, 0.6)',
   ];
 
   // Create glowing particles
   const particleCount = 30;
-  
+
   for (let i = 0; i < particleCount; i++) {
     const particle = document.createElement('div');
     const size = Math.random() * 4 + 2;
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const duration = Math.random() * 20 + 15;
     const delay = Math.random() * -30;
     const color = colors[Math.floor(Math.random() * colors.length)];
-    
+
     particle.style.cssText = `
       position: absolute;
       width: ${size}px;
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
       animation: float-up ${duration}s linear ${delay}s infinite;
       opacity: ${Math.random() * 0.5 + 0.3};
     `;
-    
+
     particlesContainer.appendChild(particle);
   }
 
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(0, 255, 255, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.15) 0%, transparent 70%);
     pointer-events: none;
     z-index: 2;
     transform: translate(-50%, -50%);
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const angle = (Math.PI * 2 * i) / 8;
       const distance = Math.random() * 50 + 30;
       const size = Math.random() * 4 + 2;
-      
+
       sparkle.style.cssText = `
         position: fixed;
         left: ${e.clientX}px;
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
         --x: ${Math.cos(angle) * distance}px;
         --y: ${Math.sin(angle) * distance}px;
       `;
-      
+
       document.body.appendChild(sparkle);
       setTimeout(() => sparkle.remove(), 800);
     }
