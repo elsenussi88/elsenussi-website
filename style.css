@@ -434,48 +434,74 @@ body {
    SOCIAL SPHERE - 3D ROTATION
    ======================================== */
 .social-sphere {
-  position: relative;
-  width: 300px;
-  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
   margin: 40px auto;
-  perspective: 1000px;
-  transform-style: preserve-3d;
-  cursor: grab;
-}
-
-.social-sphere:active {
-  cursor: grabbing;
 }
 
 .social-item {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  margin-left: -25px;
-  margin-top: -25px;
+  position: relative;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.05);
   border: 2px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
+  border-radius: 12px;
   color: var(--neon-cyan);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-decoration: none;
-  transition: border-color 0.3s, background 0.3s;
-  backface-visibility: hidden;
-  /* Hide backface if rotating items */
-  /* Note: We are using billboard style so items always face front via JS or just rotating position */
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .social-item:hover {
   border-color: var(--neon-cyan);
   background: rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 10px var(--neon-cyan);
+  transform: translateY(-5px) scale(1.05);
   z-index: 1000 !important;
-  /* Bring to front on hover */
+}
+
+.social-item:active {
+  transform: translateY(-2px) scale(0.98);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 5px var(--neon-cyan);
+}
+
+/* ========================================
+   NO LIMITS TEXT
+   ======================================== */
+.no-limits-container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.no-limits-text {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 8px;
+  color: var(--neon-cyan);
+  text-transform: uppercase;
+  animation: glow-pulse-text 3s ease-in-out infinite alternate;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes glow-pulse-text {
+  0% {
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    opacity: 0.8;
+  }
+
+  100% {
+    text-shadow: 0 0 40px rgba(0, 0, 0, 0.3), 0 0 80px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    letter-spacing: 10px;
+  }
 }
 
 /* ========================================
@@ -560,8 +586,9 @@ body {
   }
 
   .social-sphere {
-    width: 260px;
-    height: 260px;
+    width: 100%;
+    height: auto;
+    gap: 15px;
   }
 }
 
@@ -583,3 +610,60 @@ body {
     transform: scale(1) translateY(0);
   }
 }
+
+/* ========================================
+   LANGUAGE SWITCHER
+   ======================================== */
+.lang-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  color: var(--neon-cyan);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.lang-switcher:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.lang-switcher i {
+  font-size: 1.2rem;
+}
+
+/* RTL Support */
+.rtl {
+  direction: rtl;
+  font-family: 'Cairo', 'Space Grotesk', sans-serif;
+}
+
+.rtl .lang-switcher {
+  right: auto;
+  left: 20px;
+  flex-direction: row-reverse;
+}
+
+.rtl .vipe-slogan {
+  flex-direction: row-reverse;
+}
+
+.rtl .name-title {
+  font-family: 'Cairo', sans-serif;
+}
+
+/* Import Arabic Font */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap');

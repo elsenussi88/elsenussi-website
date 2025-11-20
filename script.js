@@ -115,4 +115,75 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('%cVIPE CODING FOR FUN', 'font-size: 24px; color: #00ffff; font-weight: bold; text-shadow: 0 0 10px #00ffff;');
   console.log('%cCoding without typing - powered by AI', 'font-size: 14px; color: #00aaff;');
   console.log('%cCurious developer exploring the AI-powered world of coding', 'font-size: 12px; color: #888;');
+
+  // ========================================
+  // LANGUAGE SWITCHER LOGIC
+  // ========================================
+  const translations = {
+    en: {
+      vipe_coding: "VIPE CODING",
+      for_fun: "FOR FUN",
+      tagline: "Coding Without Typing - AI Powered",
+      philosophy: "Learning · Exploring · Creating",
+      philosophy_subtitle: "Where AI meets curiosity",
+      footer: "Made with AI & curiosity",
+      lang_text: "AR",
+      no_limits: "NO LIMITS"
+    },
+    ar: {
+      vipe_coding: "برمجة ممتعة",
+      for_fun: "للمتعة",
+      tagline: "البرمجة بدون كتابة - مدعومة بالذكاء الاصطناعي",
+      philosophy: "تعلم · استكشاف · إبداع",
+      philosophy_subtitle: "حيث يلتقي الذكاء الاصطناعي بالفضول",
+      footer: "صنع بالذكاء الاصطناعي والفضول",
+      lang_text: "EN",
+      no_limits: "بلا حدود"
+    }
+  };
+
+  const langSwitcher = document.getElementById('lang-switcher');
+  const langText = document.querySelector('.lang-text');
+  let currentLang = localStorage.getItem('lang') || 'en';
+
+  function updateLanguage(lang) {
+    // Update text content
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      const key = element.getAttribute('data-i18n');
+      if (translations[lang][key]) {
+        element.textContent = translations[lang][key];
+      }
+    });
+
+    // Update button text
+    if (langText) {
+      langText.textContent = translations[lang].lang_text;
+    }
+
+    // Update direction and font
+    if (lang === 'ar') {
+      document.body.classList.add('rtl');
+      document.documentElement.setAttribute('lang', 'ar');
+      document.documentElement.setAttribute('dir', 'rtl');
+    } else {
+      document.body.classList.remove('rtl');
+      document.documentElement.setAttribute('lang', 'en');
+      document.documentElement.setAttribute('dir', 'ltr');
+    }
+
+    // Save preference
+    localStorage.setItem('lang', lang);
+    currentLang = lang;
+  }
+
+  // Initialize language
+  updateLanguage(currentLang);
+
+  // Toggle language on click
+  if (langSwitcher) {
+    langSwitcher.addEventListener('click', () => {
+      const newLang = currentLang === 'en' ? 'ar' : 'en';
+      updateLanguage(newLang);
+    });
+  }
 });

@@ -53,19 +53,25 @@
       </h1>
 
       <div class="vipe-slogan">
-        <span class="vipe-text">VIPE CODING</span>
+        <span class="vipe-text" data-i18n="vipe_coding">VIPE CODING</span>
         <span class="vipe-separator">•</span>
-        <span class="vipe-text">FOR FUN</span>
+        <span class="vipe-text" data-i18n="for_fun">FOR FUN</span>
       </div>
 
-      <p class="tagline">
+      <p class="tagline" data-i18n="tagline">
         Coding Without Typing - AI Powered
       </p>
 
       <div class="philosophy">
-        <p class="philosophy-text">Learning · Exploring · Creating</p>
-        <p class="philosophy-subtitle">Where AI meets curiosity</p>
+        <p class="philosophy-text" data-i18n="philosophy">Learning · Exploring · Creating</p>
+        <p class="philosophy-subtitle" data-i18n="philosophy_subtitle">Where AI meets curiosity</p>
       </div>
+
+      <!-- Language Switcher -->
+      <button id="lang-switcher" class="lang-switcher" aria-label="Switch Language">
+        <i class="fas fa-globe"></i>
+        <span class="lang-text">AR</span>
+      </button>
 
       <!-- Social Sphere 3D -->
       <div id="social-sphere" class="social-sphere">
@@ -100,20 +106,29 @@
           rel="noopener noreferrer" title="Facebook">
           <i class="fab fa-facebook"></i>
         </a>
+        <a href="https://www.instagram.com/elsenussi_farj/" class="social-item" target="_blank"
+          rel="noopener noreferrer" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+
+      <!-- No Limits Text -->
+      <div class="no-limits-container">
+        <p class="no-limits-text" data-i18n="no_limits">NO LIMITS</p>
       </div>
 
     </section>
 
     <!-- Footer -->
     <footer class="footer-minimal">
-      <p>&copy; <span id="year"></span> • Made with AI & curiosity</p>
+      <p>&copy; <span id="year"></span> • <span data-i18n="footer">Made with AI & curiosity</span></p>
     </footer>
 
   </main>
 
   <!-- Particles -->
   <script src="particles.js"></script>
-  <script src="social-sphere.js"></script>
+
   <script src="script.js"></script>
 </body>
 
