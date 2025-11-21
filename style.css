@@ -169,7 +169,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 40px 20px 80px;
 }
 
 /* ========================================
@@ -513,7 +513,7 @@ body {
   color: #888888;
   font-size: 0.9rem;
   letter-spacing: 1px;
-  margin-top: 80px;
+  margin-top: 150px;
 }
 
 /* ========================================
@@ -667,3 +667,93 @@ body {
 
 /* Import Arabic Font */
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap');
+
+/* ========================================
+   OFFERINGS & SERVICES SECTION
+   ======================================== */
+.offerings-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+}
+
+.offering-block,
+.services-block {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
+.offering-block:hover,
+.services-block:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.section-title {
+  font-family: 'Cairo', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--neon-cyan);
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+
+
+.offering-subtitle {
+  font-family: 'Cairo', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.offering-desc {
+  font-family: 'Cairo', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.services-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.service-item {
+  font-family: 'Cairo', sans-serif;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.service-item:hover {
+  background: var(--neon-cyan);
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-color: transparent;
+}

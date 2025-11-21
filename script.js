@@ -128,7 +128,15 @@ document.addEventListener('DOMContentLoaded', () => {
       philosophy_subtitle: "Where AI meets curiosity",
       footer: "Made with AI & curiosity",
       lang_text: "AR",
-      no_limits: "NO LIMITS"
+      no_limits: "NO LIMITS",
+      what_i_offer: "What do I offer?",
+      offer_subtitle: "Modern Web Experiences · Smart Solutions · Innovative AI Projects",
+      offer_desc: "I build fast and smooth websites and applications, integrating smart technologies to increase efficiency—driven by curiosity, creativity, and a love for innovation.",
+      services_avail: "Services Available",
+      srv_websites: "Website Creation",
+      srv_ai_tools: "AI-Powered Tools",
+      srv_automation: "Task Automation",
+      srv_projects: "Innovative Software Projects"
     },
     ar: {
       vipe_coding: "برمجة ممتعة",
@@ -138,7 +146,15 @@ document.addEventListener('DOMContentLoaded', () => {
       philosophy_subtitle: "حيث يلتقي الذكاء الاصطناعي بالفضول",
       footer: "صنع بالذكاء الاصطناعي والفضول",
       lang_text: "EN",
-      no_limits: "بلا حدود"
+      no_limits: "بلا حدود",
+      what_i_offer: "ماذا أقدّم؟",
+      offer_subtitle: "تجارب ويب حديثة · حلول ذكية · مشاريع مبتكرة تعتمد على الذكاء الاصطناعي",
+      offer_desc: "أبني مواقع وتطبيقات سريعة وسلسة، مع دمج التقنيات الذكية لرفع الكفاءة—بدافع الفضول، الإبداع، وحبّ الابتكار.",
+      services_avail: "الخدمات المتاحة",
+      srv_websites: "إنشاء مواقع",
+      srv_ai_tools: "أدوات تعمل بالذكاء الاصطناعي",
+      srv_automation: "أتمتة المهام",
+      srv_projects: "مشاريع برمجية مبتكرة"
     }
   };
 
