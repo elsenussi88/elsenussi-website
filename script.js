@@ -134,6 +134,10 @@ document.addEventListener('DOMContentLoaded', () => {
       offer_desc: "I build fast and smooth websites and applications, integrating smart technologies to increase efficiency—driven by curiosity, creativity, and a love for innovation.",
       services_avail: "Services Available",
       srv_websites: "Website Creation",
+      srv_web_design: "Professional Web Design & Development",
+      srv_ecommerce: "Complete E-Commerce Stores",
+      srv_dashboards: "Custom Dashboards & Systems",
+      srv_optimization: "Speed & User Experience Optimization",
       srv_ai_tools: "AI-Powered Tools",
       srv_automation: "Task Automation",
       srv_projects: "Innovative Software Projects"
@@ -152,6 +156,10 @@ document.addEventListener('DOMContentLoaded', () => {
       offer_desc: "أبني مواقع وتطبيقات سريعة وسلسة، مع دمج التقنيات الذكية لرفع الكفاءة—بدافع الفضول، الإبداع، وحبّ الابتكار.",
       services_avail: "الخدمات المتاحة",
       srv_websites: "إنشاء مواقع",
+      srv_web_design: "تصميم وتطوير مواقع ويب احترافية",
+      srv_ecommerce: "إنشاء متاجر إلكترونية متكاملة",
+      srv_dashboards: "تطوير لوحات تحكم وأنظمة مخصّصة",
+      srv_optimization: "تحسين السرعة وتجربة المستخدم",
       srv_ai_tools: "أدوات تعمل بالذكاء الاصطناعي",
       srv_automation: "أتمتة المهام",
       srv_projects: "مشاريع برمجية مبتكرة"
